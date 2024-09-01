@@ -14,12 +14,14 @@
 #ifndef READSD_H_
 #define READSD_H_
 
-#include <SPI.h>
+/*INCLUDE*/
 #include <SD.h>
 
+/*DEFINE*/
 #define CS_pin 10
 #define FILE_NAME "PLA.gco"
 
+/*CLASS*/
 class READSD {
 public:
     READSD();
