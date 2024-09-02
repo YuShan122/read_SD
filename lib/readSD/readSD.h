@@ -20,6 +20,7 @@
 /*DEFINE*/
 #define CS_pin 10
 #define FILE_NAME "PLA.gco"
+#define LINE_MAX_LEN 100
 
 /*CLASS*/
 class READSD {
@@ -28,6 +29,7 @@ public:
     ~READSD();
     bool init();
     void reading();
+    void readLine(char d_[]);
 private:
 };
 
