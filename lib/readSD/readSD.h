@@ -29,7 +29,7 @@ public:
     ~READSD();
     bool init();
     void reading();
-    void readLine(char d_[]);
+    bool readLine(char d_[]);
 private:
 };
 

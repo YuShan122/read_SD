@@ -32,7 +32,8 @@ void READSD::reading() {
     // myFile.close();
 }
 
-void READSD::readLine(char d_[]){
+bool READSD::readLine(char d_[]){
+    if(myFile.available() <= 0) return false;
     int i = 0;
     while(myFile.available() > 0 && myFile.peek() != 10) {
         d_[i++] = myFile.read();
@@ -41,5 +42,5 @@ void READSD::readLine(char d_[]){
     // Serial.print("d_: ");
     // Serial.println(d_);
     myFile.seek(myFile.position() + 1);
-    return;
+    return true;
 }

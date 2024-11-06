@@ -12,11 +12,13 @@ void setup() {
 void loop() {
   char received_data[100] = {};
   char read[LINE_MAX_LEN] = {};
+  static bool fileEnd = false;
 
-  ReadSD.readLine(read);
+  fileEnd = !ReadSD.readLine(read);
   while(read[0] == ';') {
-    ReadSD.readLine(read);
+    fileEnd = !ReadSD.readLine(read);
   }
+  if(fileEnd) {/*stop reading*/ return;}
   Serial.println(read);
 
   Stm.getData(received_data);
