@@ -7,8 +7,10 @@ STM::STM() {}
 STM::~STM() {}
 
 bool STM::init() {
+    Serial.print("Initializing UART with STM...");
     SSerial.begin(BAUD_RATE_STM);
     SSerial.listen();
+    Serial.print("initialization done.");
     return true;
 }
 
