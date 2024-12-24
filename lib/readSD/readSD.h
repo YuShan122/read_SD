@@ -29,8 +29,9 @@ public:
     ~READSD();
     bool init();
     void reading();
-    bool readLine(char d_[]);
+    bool readCommand(char d_[]);
 private:
+    bool readLine(char d_[]);
 };
 
 extern class READSD ReadSD;

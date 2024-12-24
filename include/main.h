@@ -12,6 +12,7 @@
 /*INCLUDE*/
 #include "readSD.h"
 #include "stm.h"
+#include "lcd.h"
 
 /*DEFINE*/
 #define BAUD_RATE_SERIAL 9600
